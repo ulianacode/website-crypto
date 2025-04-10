@@ -12,32 +12,6 @@ const headerStyle = {
     display: 'flex',
     aligmItems: 'center',
   };
-  const options = [
-    {
-      label: 'China',
-      value: 'china',
-      emoji: '🇨🇳',
-      desc: 'China (中国)',
-    },
-    {
-      label: 'USA',
-      value: 'usa',
-      emoji: '🇺🇸',
-      desc: 'USA (美国)',
-    },
-    {
-      label: 'Japan',
-      value: 'japan',
-      emoji: '🇯🇵',
-      desc: 'Japan (日本)',
-    },
-    {
-      label: 'Korea',
-      value: 'korea',
-      emoji: '🇰🇷',
-      desc: 'Korea (韩国)',
-    },
-  ];
 
 function AppHeader() {
     const { crypto } = useCrypto();
@@ -97,7 +71,7 @@ function AppHeader() {
                   open={drawer}
                   destroyOnClose
              >
-                <AddAssetForm/>
+                <AddAssetForm onClose={() => setDrawer(false)}/>
           </Drawer>
 
         </Layout.Header>
